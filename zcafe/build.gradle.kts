@@ -23,6 +23,10 @@ repositories {
 }
 
 dependencies {
+    val exposedVersion: String by project
+    val h2_version: String by project
+    val hikaricp_version: String by project
+
     implementation("io.ktor:ktor-server-content-negotiation-jvm")
     implementation("io.ktor:ktor-server-core-jvm")
     implementation("io.ktor:ktor-serialization-kotlinx-json-jvm")
@@ -31,4 +35,22 @@ dependencies {
     implementation("io.ktor:ktor-server-config-yaml")
     testImplementation("io.ktor:ktor-server-test-host-jvm")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+    // Exposed
+    implementation("org.jetbrains.exposed:exposed-core:$exposedVersion")
+    implementation("org.jetbrains.exposed:exposed-crypt:$exposedVersion")
+    implementation("org.jetbrains.exposed:exposed-dao:$exposedVersion")
+    implementation("org.jetbrains.exposed:exposed-jdbc:$exposedVersion")
+
+//    implementation("org.jetbrains.exposed:exposed-jodatime:$exposedVersion")
+//    // or
+    implementation("org.jetbrains.exposed:exposed-java-time:$exposedVersion")
+//    // or
+    implementation("org.jetbrains.exposed:exposed-kotlin-datetime:$exposedVersion")
+
+    implementation("org.jetbrains.exposed:exposed-json:$exposedVersion")
+    implementation("org.jetbrains.exposed:exposed-money:$exposedVersion")
+    implementation("org.jetbrains.exposed:exposed-spring-boot-starter:$exposedVersion")
+
+    implementation("com.h2database:h2:$h2_version")
+    implementation("com.zaxxer:HikariCP:$hikaricp_version")
 }

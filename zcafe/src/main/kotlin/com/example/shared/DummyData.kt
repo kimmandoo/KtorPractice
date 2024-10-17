@@ -1,6 +1,6 @@
 package com.example.shared
 
-import com.example.model.CafeMenu
+import com.example.domain.model.CafeMenu
 
 val menuList = listOf(
     CafeMenu(
